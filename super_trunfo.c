@@ -118,25 +118,25 @@ int main(){
 
    float superPoder2 = (float)populacao2 + area2 + pib2 + (float)turisticos2 + capita2 + inversoDensidade2;
 
-   // Calculo comparação
+   // Calculo comparação Desafio tema 2
 
-   int populacao = populacao1 > populacao2;
+  /* int populacao = populacao1 > populacao2;
    int area = area1 > area2;
    int pib = pib1 > pib2;
    int turistico = turisticos1 > turisticos2;
    int densidade = densidade1 < densidade2;
    int capita = capita1 > capita2;
-   int superPoder = superPoder1 > superPoder2;
+   int superPoder = superPoder1 > superPoder2;*/
 
-   // Calculo carta 
+   // Calculo carta desafio tema 2
 
-   int cartaPopulacao = 2 - (populacao1 > populacao2);
+  /* int cartaPopulacao = 2 - (populacao1 > populacao2);
    int cartaArea = 2 - (area1 > area2);
    int cartaPib = 2 - (pib1 > pib2);
    int cartaTuristico = 2 - (turisticos1 > turisticos2);
    int cartaDensidade = 2 - (densidade1 < densidade2);
    int cartaCapita = 2 - (capita1 > capita2);
-   int cartaSuperPoder = 2 - (superPoder1 > superPoder2);
+   int cartaSuperPoder = 2 - (superPoder1 > superPoder2);*/
 
 
     //Após o cadastro, o sistema exibirá os dados de cada cidade de forma organizada.
@@ -166,16 +166,35 @@ int main(){
     printf("O PIB per capita: %f \n",capita2);
     printf("Super Poder: %.2f\n", superPoder2);
 
-    // Comparação
+    // Comparação tema 2
 
-    printf("\nComparação de Cartas:\n");
+    /*printf("\nComparação de Cartas:\n");
     printf("População: Carta %d venceu (%d)\n", cartaPopulacao, populacao);
     printf("Área: Carta %d venceu (%d)\n", cartaArea, area );
     printf("PIB: Carta %d venceu (%d)\n", cartaPib, pib);
     printf("Pontos Turísticos: Carta %d venceu (%d)\n", cartaTuristico, turistico);
     printf("Densidade Populacional: Carta %d venceu (%d)\n", cartaDensidade, densidade);
     printf("PIB per Capita: Carta %d venceu (%d)\n", cartaCapita, capita);
-    printf("Super Poder: Carta %d venceu (%d)\n", cartaSuperPoder, superPoder);
+    printf("Super Poder: Carta %d venceu (%d)\n", cartaSuperPoder, superPoder); */
 
+
+    //Comparação tema 3 
+
+    if (populacao1 > populacao2)
+    {
+        printf("Carta 1 - %s (%c) %ld venceu \n", nomeCidade1, estado1, populacao1);
+    } else
+    {
+       printf("Carta 2 - %s (%c) %ld venceu \n", nomeCidade2, estado2, populacao2);
+    }
+    
+       if (populacao1 > populacao2)
+    {
+        printf("Resultado: Carta 1 (%s) Venceu", nomeCidade1);
+    }  else 
+    {
+        printf("Resultado: Carta 2 (%s) Venceu", nomeCidade2);
+    }
+    
     return 0;
 }
