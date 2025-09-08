@@ -180,7 +180,7 @@ int main(){
 
     //Comparação tema 3 
 
-    if (populacao1 > populacao2)
+   /* if (populacao1 > populacao2)
     {
         printf("Carta 1 - %s (%c) %ld venceu \n", nomeCidade1, estado1, populacao1);
     } else
@@ -194,7 +194,142 @@ int main(){
     }  else 
     {
         printf("Resultado: Carta 2 (%s) Venceu", nomeCidade2);
-    }
+    }*/
+
+// Tema 3: Desafio nível aventureiro
+
+//Inicio Menu interativo
+
+int opcao;
+
+printf("Escolha os atributos para comparação\n");
+printf("1. População\n");
+printf("2. Área\n");
+printf("3. PIB\n");
+printf("4. Pontos Turisticos\n");
+printf("5. Densidade populacional\n");
+printf("6. PIB per capita\n");
+printf("7. Super poder\n");
+printf("Escolha duas opções (1-7):\n");
+scanf("%d", &opcao);
+
+
+switch (opcao)
+{
+
+case 1:
+printf("Atributo População\n");
+printf("Carta 1(%s): %ld habitantes\n", nomeCidade1, populacao1 );
+printf("Carta 2(%s): %ld habitantes\n", nomeCidade2, populacao2 );
+
+if (populacao1 > populacao2)
+{
+    printf("Carta 1 venceu - %s (%ld habitantes)", nomeCidade1, populacao1);
+} else if(populacao1 < populacao2){
+    printf("Carta 2 venceu - %s (%ld habitantes)", nomeCidade2, populacao2);
+} else{
+    printf("Impate");
+}
+break;
+
+case 2:
+printf("Atributo Área\n");
+printf("Carta 1(%s): %2.f Area\n", nomeCidade1, area1 );
+printf("Carta 2(%s): %2.f Area\n", nomeCidade2, area2 );
+
+if (area1 > area2)
+{
+    printf("Carta 1 venceu - %s (%2.f area)", nomeCidade1, area1);
+} else if(area1 < area2){
+    printf("Carta 2 venceu - %s (%ld area)", nomeCidade2, area2);
+} else{
+    printf("Impate");
+}
+break;
+
+case 3:
+printf("Atributo PIB\n");
+printf("Carta 1(%s): %2.f habitantes\n", nomeCidade1, pib1 );
+printf("Carta 2(%s): %2.f habitantes\n", nomeCidade2, pib2 );
+
+if (pib1 > pib2)
+{
+    printf("Carta 1 venceu - %s (%2.f PIB)", nomeCidade1, pib1);
+} else if(pib1 < pib2){
+    printf("Carta 2 venceu - %s (%2.f PIB)", nomeCidade2, pib2);
+} else{
+    printf("Impate");
+}
+break;
+
+case 4:
+
+printf("Atributo Pontos turisticos\n");
+printf("Carta 1(%s): %d pontos turisticos\n", nomeCidade1, turisticos1 );
+printf("Carta 2(%s): %d pontos turisticos\n", nomeCidade2, turisticos2 );
+
+if (turisticos1 > turisticos2)
+{
+    printf("Carta 1 venceu - %s (%d pontos turisticos)", nomeCidade1, turisticos1);
+} else if(turisticos1 < turisticos2){
+    printf("Carta 2 venceu - %s (%d pontos turisticos)", nomeCidade2, turisticos2);
+} else{
+    printf("Impate");
+}
+break;
+
+case 5:
+
+printf("Atributo Densidade populacional\n");
+printf("Carta 1(%s): %f densidade populacional\n", nomeCidade1, densidade1 );
+printf("Carta 2(%s): %f densidade populacional\n", nomeCidade2, densidade2 );
+
+if (densidade1 < densidade2)
+{
+    printf("Carta 1 venceu - %s (%f densidade populacional)", nomeCidade1, densidade1);
+} else if(densidade1 > densidade2){
+    printf("Carta 2 venceu - %s (%f densidade populacional)", nomeCidade2, densidade2);
+} else{
+    printf("Impate");
+}
+break;
+
+case 6:
+
+printf("Atributo PIB per capita\n");
+printf("Carta 1(%s): %f PIB per capita\n", nomeCidade1, capita1 );
+printf("Carta 2(%s): %f PIB per capita\n", nomeCidade2, capita2 );
+
+if (capita1 > capita2)
+{
+    printf("Carta 1 venceu - %s (%f PIB per capita)", nomeCidade1, capita1);
+} else if(capita1 < capita2){
+    printf("Carta 2 venceu - %s (%f PIB per capita)", nomeCidade2, capita2);
+} else{
+    printf("Impate");
+}
+break;
+
+case 7:
+printf("Atributo Super Poder\n");
+printf("Carta 1(%s): %f Super Poder\n", nomeCidade1, superPoder1 );
+printf("Carta 2(%s): %f Super Poder\n", nomeCidade2, superPoder2 );
+
+if (superPoder1 > superPoder2)
+{
+    printf("Carta 1 venceu - %s (%f Super Poder)", nomeCidade1, superPoder1);
+} else if(superPoder1 < superPoder2){
+    printf("Carta 2 venceu - %s (%f Super Poder)", nomeCidade2, superPoder2);
+} else{
+    printf("Impate");
+}
+
+break;
+
+default:
+printf("Opção invalida");
+    break;
+}
     
     return 0;
 }
