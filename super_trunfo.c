@@ -200,9 +200,22 @@ int main(){
 
 //Inicio Menu interativo
 
-int opcao;
+//int opcao;
+int primeiroAtributo;
+int segundoAtributo;
 
-printf("Escolha os atributos para comparação\n");
+int primeiroResultado;
+int segundoResultado;
+
+float valorAttr1Carta1;
+float valorAttr1Carta2;
+float valorAttr2Carta1;
+float valorAttr2Carta2;
+float somaCarta1;
+float somaCarta2;
+
+
+printf("Escolha o primeiro atributo para comparação\n");
 printf("1. População\n");
 printf("2. Área\n");
 printf("3. PIB\n");
@@ -211,10 +224,261 @@ printf("5. Densidade populacional\n");
 printf("6. PIB per capita\n");
 printf("7. Super poder\n");
 printf("Escolha duas opções (1-7):\n");
-scanf("%d", &opcao);
+scanf("%d", &primeiroAtributo);
 
 
-switch (opcao)
+
+// Tema 3 Comparação nivel Mestre
+
+switch (primeiroAtributo)
+{
+
+case 1:
+//printf("Atributo População\n");
+//printf("Carta 1(%s): %ld habitantes\n", nomeCidade1, populacao1 );
+//printf("Carta 2(%s): %ld habitantes\n", nomeCidade2, populacao2 );
+valorAttr1Carta1 = (float)populacao1;
+valorAttr1Carta2 = (float)populacao2;
+
+break;
+
+case 2:
+//printf("Atributo Área\n");
+//printf("Carta 1(%s): %2.f Area\n", nomeCidade1, area1 );
+//printf("Carta 2(%s): %2.f Area\n", nomeCidade2, area2 );
+valorAttr1Carta1 = (float)area1;
+valorAttr1Carta2 = (float)area2;
+
+
+break;
+
+case 3:
+//printf("Atributo PIB\n");
+//printf("Carta 1(%s): %2.f habitantes\n", nomeCidade1, pib1 );
+//printf("Carta 2(%s): %2.f habitantes\n", nomeCidade2, pib2 );
+valorAttr1Carta1 = (float)pib1;
+valorAttr1Carta2 = (float)pib2;
+
+break;
+
+case 4:
+
+//printf("Atributo Pontos turisticos\n");
+//printf("Carta 1(%s): %d pontos turisticos\n", nomeCidade1, turisticos1 );
+//printf("Carta 2(%s): %d pontos turisticos\n", nomeCidade2, turisticos2 );
+valorAttr1Carta1 = (float)turisticos1;
+valorAttr1Carta2 = (float)turisticos2;
+
+
+break;
+
+case 5:
+
+//printf("Atributo Densidade populacional\n");
+//printf("Carta 1(%s): %f densidade populacional\n", nomeCidade1, densidade1 );
+//printf("Carta 2(%s): %f densidade populacional\n", nomeCidade2, densidade2 );
+valorAttr1Carta1 = (float)densidade1;
+valorAttr1Carta2 = (float)densidade2;
+
+break;
+
+case 6:
+
+//printf("Atributo PIB per capita\n");
+//printf("Carta 1(%s): %f PIB per capita\n", nomeCidade1, capita1 );
+//printf("Carta 2(%s): %f PIB per capita\n", nomeCidade2, capita2 );
+valorAttr1Carta1 = (float)capita1;
+valorAttr1Carta2 = (float)capita2;
+
+
+break;
+
+case 7:
+//printf("Atributo Super Poder\n");
+//printf("Carta 1(%s): %f Super Poder\n", nomeCidade1, superPoder1 );
+//printf("Carta 2(%s): %f Super Poder\n", nomeCidade2, superPoder2 );
+valorAttr1Carta1 = (float)superPoder1;
+valorAttr1Carta2 = (float)superPoder2;
+
+
+break;
+
+default:
+printf("Opção invalida");
+break;
+}
+
+//Segunda comparação
+
+printf("Escolha o segundo atributo para comparação\n");
+printf("1. População\n");
+printf("2. Área\n");
+printf("3. PIB\n");
+printf("4. Pontos Turisticos\n");
+printf("5. Densidade populacional\n");
+printf("6. PIB per capita\n");
+printf("7. Super poder\n");
+printf("Escolha duas opções (1-7):\n");
+scanf("%d", &segundoAtributo);
+
+if (primeiroAtributo == segundoAtributo)
+{
+    printf("Você escolheu o mesmo atributo, retorne!\n");
+} else {
+
+switch (segundoAtributo)
+{
+
+case 1:
+//printf("Atributo População\n");
+//printf("Carta 1(%s): %ld habitantes\n", nomeCidade1, populacao1 );
+//printf("Carta 2(%s): %ld habitantes\n", nomeCidade2, populacao2 );
+valorAttr2Carta1 = (float)populacao1;
+valorAttr2Carta2 = (float)populacao2;
+
+
+break;
+
+case 2:
+//printf("Atributo Área\n");
+//printf("Carta 1(%s): %2.f Area\n", nomeCidade1, area1 );
+//printf("Carta 2(%s): %2.f Area\n", nomeCidade2, area2 );
+valorAttr2Carta1 = (float)area1;
+valorAttr2Carta2 = (float)area2;
+
+
+break;
+
+case 3:
+//printf("Atributo PIB\n");
+//printf("Carta 1(%s): %2.f habitantes\n", nomeCidade1, pib1 );
+//printf("Carta 2(%s): %2.f habitantes\n", nomeCidade2, pib2 );
+valorAttr2Carta1 = (float)pib1;
+valorAttr2Carta2 = (float)pib2;
+
+
+break;
+
+case 4:
+
+//printf("Atributo Pontos turisticos\n");
+//printf("Carta 1(%s): %d pontos turisticos\n", nomeCidade1, turisticos1 );
+//printf("Carta 2(%s): %d pontos turisticos\n", nomeCidade2, turisticos2 );
+valorAttr2Carta1 = (float)turisticos1;
+valorAttr2Carta2 = (float)turisticos2;
+
+
+break;
+
+case 5:
+
+//printf("Atributo Densidade populacional\n");
+//printf("Carta 1(%s): %f densidade populacional\n", nomeCidade1, densidade1 );
+//printf("Carta 2(%s): %f densidade populacional\n", nomeCidade2, densidade2 );
+valorAttr2Carta1 = (float)densidade1;
+valorAttr2Carta2 = (float)densidade2;
+
+
+break;
+
+case 6:
+
+//printf("Atributo PIB per capita\n");
+//printf("Carta 1(%s): %f PIB per capita\n", nomeCidade1, capita1 );
+//printf("Carta 2(%s): %f PIB per capita\n", nomeCidade2, capita2 );
+valorAttr2Carta1 = (float)capita1;
+valorAttr2Carta2 = (float)capita2;
+
+
+break;
+
+case 7:
+//printf("Atributo Super Poder\n");
+//printf("Carta 1(%s): %f Super Poder\n", nomeCidade1, superPoder1 );
+//printf("Carta 2(%s): %f Super Poder\n", nomeCidade2, superPoder2 );
+valorAttr2Carta1 = (float)superPoder1;
+valorAttr2Carta2 = (float)superPoder2;
+
+
+break;
+
+default:
+printf("Opção inválida");
+break;
+}
+}
+
+somaCarta1 = valorAttr1Carta1 + valorAttr2Carta1;
+somaCarta2 = valorAttr1Carta2 + valorAttr2Carta2;
+        
+printf("Resultado\n");
+        
+
+printf("Carta 1: %s ---\n", nomeCidade1);
+        
+ 
+    switch(primeiroAtributo) {
+        case 1: printf("Populacao"); break;
+        case 2: printf("Area (km2)"); break;
+        case 3: printf("PIB (bilhoes)"); break;
+        case 4: printf("Pontos Turisticos"); break;
+        case 5: printf("Inverso da Densidade"); break;
+        case 6: printf("PIB per Capita"); break;
+        case 7: printf("Super Poder"); break;
+        }
+ printf(": %.2f\n", valorAttr1Carta1);
+
+
+    switch(segundoAtributo) {
+        case 1: printf("Populacao"); break;
+        case 2: printf("Area (km2)"); break;
+        case 3: printf("PIB (bilhoes)"); break;
+        case 4: printf("Pontos Turisticos"); break;
+        case 5: printf("Inverso da Densidade"); break;
+        case 6: printf("PIB per Capita"); break;
+        case 7: printf("Super Poder"); break;
+        }
+printf(": %.2f\n", valorAttr2Carta1);
+printf("Soma total: %.2f\n", somaCarta1);
+
+
+printf("\nCarta 2: %s ---\n", nomeCidade2);
+
+    switch(primeiroAtributo) {
+        case 1: printf("Populacao"); break;
+        case 2: printf("Area (km2)"); break;
+        case 3: printf("PIB (bilhoes)"); break;
+        case 4: printf("Pontos Turisticos"); break;
+        case 5: printf("Inverso da Densidade"); break;
+        case 6: printf("PIB per Capita"); break;
+        case 7: printf("Super Poder"); break;
+        }
+printf(": %.2f\n", valorAttr1Carta2);
+        
+
+    switch(segundoAtributo) {
+        case 1: printf("Populacao"); break;
+        case 2: printf("Area (km2)"); break;
+        case 3: printf("PIB (bilhoes)"); break;
+        case 4: printf("Pontos Turisticos"); break;
+        case 5: printf("Inverso da Densidade"); break;
+        case 6: printf("PIB per Capita"); break;
+        case 7: printf("Super Poder"); break;
+        }
+printf(": %.2f\n", valorAttr2Carta2);
+printf("Soma total: %.2f\n", somaCarta2);
+
+printf("\nVencedor\n");
+    if (somaCarta1 > somaCarta2) {
+        printf("Vencedor: Carta 1 - %s \n", nomeCidade1);
+        } else if (somaCarta2 > somaCarta1) {
+            printf("Vencedor: Carta 2 - %s \n", nomeCidade2);
+        } else {
+            printf(" Empate! \n");
+        }
+
+// Tema 3 comparação nivel Aventureiro
+/*switch (opcao)
 {
 
 case 1:
@@ -329,7 +593,8 @@ break;
 default:
 printf("Opção invalida");
     break;
-}
-    
+}*/
+
+
     return 0;
 }
